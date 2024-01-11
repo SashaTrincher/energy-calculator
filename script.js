@@ -39,7 +39,7 @@ function waterEfficencyCalc () {
 
     const energyContentKwh = hydrogenHhvKjPerKg * hydrogenMassKilos * kjToKwh;
 
-    const gasTurbineEfficiency = 0.35;
+    const gasTurbineEfficiency = 0.382; // H-100 Gas Turbines
     const electricityGeneratedKwh = energyContentKwh * gasTurbineEfficiency;
 
     console.log(electricityGeneratedKwh);
@@ -60,7 +60,7 @@ const powerTriggerElem = document.getElementById('powerCalcTrigger');
 
 function calcWaterNeeded (value) {
     const targetElectricityKwh = value;
-    const gasTurbineEfficiency = 0.35;
+    const gasTurbineEfficiency = 0.382; // H-100 Gas Turbines
     
     const initialEnergyContentKwh = targetElectricityKwh / gasTurbineEfficiency;
 
